@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div>
+            <label>男：<input type="radio" value="nan" name="sex" v-model="sex"></label>
+            <label>女：<input type="radio" value="nv" name="sex" v-model="sex"></label>
+            <h1>{{sex}}</h1>
+        </div>
+        <div class="=checkbox">
+            <label>aa<input type="checkbox" v-model="hobby" value="a"></label>
+            <label>bb<input type="checkbox" v-model="hobby" value="b"></label>
+            <label>cc<input type="checkbox" v-model="hobby" value="c"></label>
+            <h1>{{hobby}}</h1>
+        </div>
+    </div>
+    <script src="./dist/10.js"></script>
+</body>
+
+</html>

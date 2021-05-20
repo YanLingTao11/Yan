@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- split是打断，就是从o开始打断，这里的参数区分大小写 -->
+        <h1>{{title.toUpperCase().split('O')}}</h1>
+        <!-- 管道，以前一个的结果作为后一个的参数 -->
+        <h1>{{title | toUpper() | toArray()}}</h1>
+    </div>
+    <script src="./dist/07.js"></script>
+</body>
+
+</html>

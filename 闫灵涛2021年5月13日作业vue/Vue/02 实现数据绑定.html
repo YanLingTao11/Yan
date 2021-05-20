@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="el">
+        <h1>{{title}}</h1>
+    </div>
+    <!-- 视图模型 -->
+    <script>
+        let data = {
+            title: '斑码教育',
+            _title: '斑码教育'
+        }
+
+        function Vue(obj) {
+            // console.log(obj.el);
+            let data = obj.data;
+            //获得模板字符串
+            let tpl = document.querySelector(obj.el).innerHTML;
+            //绑定数据
+            Object.defineProperty(obj.data, 'title', {
+                //get
+                get() {
+                    return this._title;
+                },
+                //set
+                set(value) {
+                    this._title = value;
+                    //更新视图
+                    updateView();
+                }
+            })
+
+            function updateView() {
+                //替换
+                let str = tpl.replace(/{{(\w+)}}/, (match, $1) => {
+                    console.log(data[$1]);
+                    return data[$1];
+                });
+                //更新视图
+                document.querySelector(obj.el).innerHTML = str;
+            }
+
+            updateView();
+        }
+
+        //让视图和数据绑定
+        let app = new Vue({
+            //绑定视图
+            el: '#el',
+            //绑定数据
+            data
+        })
+    </script>
+</body>
+
+</html>

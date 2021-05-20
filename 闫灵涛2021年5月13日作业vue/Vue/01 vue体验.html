@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="el">
+        <h1>{{title}}</h1>
+        <h2>{{slogan}}</h2>
+    </div>
+    <script src="./vue.js"></script>
+    <script>
+        //数据
+        let data = {
+            title: '斑码教育',
+            slogan: '斑动梦想，马上起航！'
+        }
+
+        //让视图和数据绑定
+        let app = new Vue({
+            //绑定视图
+            el: '#el',
+            data
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>{{title}} 我爱你塞北的雪！</h1>
+        <h1 v-text="title +'我爱你塞北的雪！'">我爱你塞北的雪</h1>
+        <h1 v-html="title +'我爱你塞北的雪！'">我爱你塞北的雪</h1>
+        <h1 v-once v-html="title +'我爱你塞北的雪！'">我爱你塞北的雪</h1>
+        <div class="box" v-once>
+            <h1>{{title}} 我爱你塞北的雪！</h1>
+            <h1 v-text="title + '我爱你塞北的雪!'">我爱你塞北的雪</h1>
+            <h1 v-html="title + '我爱你塞北的雪!'">我爱你塞北的雪</h1>
+        </div>
+    </div>
+    <b>hello</b>hello
+    <h1>塞北的雪</h1>
+    <script src="./dist/06.js"></script>
+</body>
+
+</html>
