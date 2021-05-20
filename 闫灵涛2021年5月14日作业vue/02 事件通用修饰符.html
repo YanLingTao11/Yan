@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- self：只有触发当前元素，才会触发事件，避免子元素事件冒泡触发该事件 -->
+        <div class="box" @click.self="demo" style="border:1px solid red;height:300px;">
+            <!-- 阻止冒泡 -->
+            <button>box</button>
+            <button @click.stop="say">btn-1</button>
+            <hr>
+            <!-- 阻止默认行为 -->
+            <!-- 不刷新页面触发事件 -->
+            <a @click.prevent.stop="say">btn-2</a>
+            <!-- 刷新页面触发事件 -->
+            <a @click="say" href="">btn-3</a>
+            <hr>
+            <!-- once一次性事件 -->
+            <button @click.once.stop="say">btn-4</button>
+            <button @click.stop="say">btn-5</button>
+        </div>
+    </div>
+    <script src="./dist/02.js"></script>
+</body>
+
+</html>

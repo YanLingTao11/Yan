@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>鼠标修饰符</h1>
+        <!-- 左键 -->
+        <button @click.left="say">btn-1</button>
+        <!-- 中键 -->
+        <button @click.middle="say">btn-2</button>
+        <!-- 右键 -->
+        <button @click.right="say">btn-3</button>
+        <h1>系统键修饰符</h1>
+        <!-- ctrl、shift、alt、帮助键 widnow：窗口 | mac：command -->
+        <button @click.ctrl="say">ctrl</button>
+        <button @click.shift="say">shift</button>
+        <button @click.alt="say">alt</button>
+        <button @click.meta="say">meta-帮助键</button>
+        <h1>键盘事件修饰符</h1>
+        <label>esc<input type="text" @keydown.esc="xxoo"></label>
+        <label>alt<input type="text" @keydown.alt="xxoo"></label>
+        <label>a<input type="text" @keydown.a="xxoo"></label>
+        <label>+<input type="text" @keydown.+="xxoo"></label>
+        <label>?<input type="text" @keydown.?="xxoo"></label>
+        <label>delete<input type="text" @keydown.delete="xxoo"></label>
+    </div>
+    <script src="./dist/03.js"></script>
+</body>
+
+</html>

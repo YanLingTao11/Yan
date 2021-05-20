@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <button @click="toggle">点击切换数字</button>
+        <!-- 模板指令 -->
+        <h1 v-if="flag == 1">斑码教育</h1>
+        <h1 v-else-if="flag == 2">斑动梦想，码上起航！</h1>
+        <h1 v-else-if="flag == 3">让学习成为一种习惯！</h1>
+        <h1 v-else>Coding for tomorrow,Giving a better future</h1>
+        <!-- v-show：显示和隐藏的切换 -->
+        <h1 v-show="flag % 2 == 1">读万卷书，行万里路，阅人无数！</h1>
+    </div>
+    <script src="./dist/07.js"></script>
+</body>
+
+</html>

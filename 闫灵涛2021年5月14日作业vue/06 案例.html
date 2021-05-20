@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="app">
+        <div id="shop">
+            图片：
+            <img @click="imgClick(0)" :style="{borderColor:color[0]}" src="./imgs/1.jpg" alt="">
+            <img @click="imgClick(1)" :style="{borderColor:color[1]}" src="./imgs/2.jpg" alt="">
+            <img @click="imgClick(2)" :style="{borderColor:color[2]}" src="./imgs/3.jpg" alt="">
+        </div>
+        <div id="size">
+            尺寸：
+            <span :style="{cursor:corsor[0]}"></span>
+            <span :style="{cursor:corsor[1]}"></span>
+            <span :style="{cursor:corsor[2]}"></span>
+        </div>
+    </div>
+    <script src="./dist/06.js"></script>
+</body>
+
+</html>

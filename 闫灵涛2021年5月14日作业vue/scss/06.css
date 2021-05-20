@@ -1,0 +1,28 @@
+#shop {
+  padding-left: 500px;
+}
+
+#shop img {
+  vertical-align: middle;
+  border: 1px solid grey;
+  margin-right: 20px;
+}
+
+#size {
+  margin-top: 50px;
+  padding-left: 500px;
+}
+
+#size span {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  margin-right: 20px;
+  border: 1px solid #000;
+  line-height: 42px;
+  text-align: center;
+}
+
+#size span:hover {
+  border: 1px solid red;
+}
